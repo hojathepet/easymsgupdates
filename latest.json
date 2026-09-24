@@ -1,8 +1,10 @@
 {
-  "version": "0.3.2",
-  "notes": "LAN 연결 안정성과 보안 강화: QR 유니캐스트 보강, 양방향 연결 재시도, 임시 X25519 세션 키, 재전송/순번 검증, Private LAN 전용 Windows 방화벽 복구 옵션.",
+  "version": "0.3.3",
+  "notes": "자동업데이트 안정성 수정: ZIP 직접 덮어쓰기를 폐기하고 SHA-256 검증된 EasyMsg 설치 프로그램이 현재 설치 위치를 안전하게 갱신한 뒤 앱을 다시 실행합니다.",
   "windows": {
+    "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
+    "installerSha256": "7b185ece31d3b5d534ac440b86629d39b66c06bff64274a4804610eab8c5a23a",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "f18f92fa752827945afdbcae9b5aab1bb4bac35bf474d96ada01bcfe009270ea"
+    "sha256": "5b1d950391e41e1dfbb073cef13c3639a32fd2de10d08f89bcc5ab3f016caf5a"
   }
 }
