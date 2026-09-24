@@ -1,8 +1,8 @@
 {
-  "version": "0.3.1",
-  "notes": "자동 업데이트 채널 연결 수정. 이후 새 버전은 EasyMsg가 시작 시 자동으로 확인합니다.",
+  "version": "0.3.2",
+  "notes": "LAN 연결 안정성과 보안 강화: QR 유니캐스트 보강, 양방향 연결 재시도, 임시 X25519 세션 키, 재전송/순번 검증, Private LAN 전용 Windows 방화벽 복구 옵션.",
   "windows": {
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "1a71fd098e304361a9a6ce86164d555c806806dfd9d61fabf37de313084023f5"
+    "sha256": "f18f92fa752827945afdbcae9b5aab1bb4bac35bf474d96ada01bcfe009270ea"
   }
 }
