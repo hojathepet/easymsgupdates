@@ -1,0 +1,8 @@
+{
+  "version": "0.3.0",
+  "notes": "Enter 전송, Shift+Enter 줄바꿈, 드래그 앤 드롭, 실시간 파일 전송률, TXT/MD 저장 메뉴, UI/UX 전면 개선",
+  "windows": {
+    "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
+    "sha256": "c32d1ed8904c6fa4327bd2472227e20459bcaa6bb74fa8f17f92e7882c746e2a"
+  }
+}
