@@ -16,9 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download final v0.3.1 Windows artifact
+      - name: Download EasyMsg 0.3.2 Windows artifact
         run: |
-          curl -L --fail --retry 3 'https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-d61c-822f-bcae-ee078035f176/raw?se=2026-09-24T05%3A25%3A17Z&sp=r&sv=2026-02-06&sr=b&scid=c5c0d336-aca7-5de3-b321-e0699b5e4e8e&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T04%3A05%3A20Z&ske=2026-09-25T04%3A05%3A20Z&sks=b&skv=2026-02-06&sig=byoJ5fivff79cflIXuBTK7/HhRa36CIXxsB7PaTGGy8%3D' -o ci-artifact.zip
+          curl -L --fail --retry 3 'https://sdmntprindiasocentral.oaiusercontent.com/files/00000000-4620-8211-ba71-ee2cb0de83a2/raw?se=2026-09-24T06%3A25%3A44Z&sp=r&sv=2026-02-06&sr=b&scid=c02d106e-7483-5218-8755-7a94fdc63c9a&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T02%3A28%3A28Z&ske=2026-09-25T02%3A28%3A28Z&sks=b&skv=2026-02-06&sig=%2BI1pv2W3PgQl1BgP3HqrFKRNUbeIuGh5Yk9bD3f29QQ%3D' -o ci-artifact.zip
 
       - name: Extract distributable package
         run: |
@@ -38,8 +38,8 @@ jobs:
           SHA=$(sha256sum EasyMsg-Windows-x64.zip | awk '{print $1}')
           cat > latest.json <<EOF
           {
-            "version": "0.3.1",
-            "notes": "자동 업데이트 채널 연결 수정. 이후 새 버전은 EasyMsg가 시작 시 자동으로 확인합니다.",
+            "version": "0.3.2",
+            "notes": "LAN 연결 안정성과 보안 강화: QR 유니캐스트 보강, 양방향 연결 재시도, 임시 X25519 세션 키, 재전송/순번 검증, Private LAN 전용 Windows 방화벽 복구 옵션.",
             "windows": {
               "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
               "sha256": "$SHA"
@@ -52,5 +52,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add EasyMsg-Windows-x64.zip latest.json
-          git commit -m "release: EasyMsg 0.3.1" || exit 0
+          git commit -m "release: EasyMsg 0.3.2" || exit 0
           git push
