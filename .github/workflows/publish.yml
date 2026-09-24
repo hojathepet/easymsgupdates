@@ -16,9 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download v0.3.0 Windows artifact
+      - name: Download v0.3.1 Windows artifact
         run: |
-          curl -L --fail --retry 3 'https://sdmntprjapaneast.oaiusercontent.com/files/00000000-6108-8209-b77b-16efdc4d9187/raw?se=2026-09-24T05%3A17%3A49Z&sp=r&sv=2026-02-06&sr=b&scid=af744233-c7d3-5ecd-8ce9-7126c3fa4199&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T01%3A17%3A20Z&ske=2026-09-25T01%3A17%3A20Z&sks=b&skv=2026-02-06&sig=9K01ICm%2BtfdyqhGC1Qm2DCKn424m3MB4d3lG5EoTpG0%3D' -o ci-artifact.zip
+          curl -L --fail --retry 3 'https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-cbec-822f-a159-a5eccbc47650/raw?se=2026-09-24T05%3A24%3A22Z&sp=r&sv=2026-02-06&sr=b&scid=837ac895-13d3-546c-90d7-bfb842209225&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T01%3A35%3A10Z&ske=2026-09-25T01%3A35%3A10Z&sks=b&skv=2026-02-06&sig=NqO/ECFN%2B%2BzyA6CNieJgJewlCCii3%2Bn8Pq4vgaYP/48%3D' -o ci-artifact.zip
 
       - name: Extract distributable package
         run: |
@@ -38,8 +38,8 @@ jobs:
           SHA=$(sha256sum EasyMsg-Windows-x64.zip | awk '{print $1}')
           cat > latest.json <<EOF
           {
-            "version": "0.3.0",
-            "notes": "Enter 전송, Shift+Enter 줄바꿈, 드래그 앤 드롭, 실시간 파일 전송률, TXT/MD 저장 메뉴, UI/UX 전면 개선",
+            "version": "0.3.1",
+            "notes": "자동 업데이트 채널 연결 수정. 이후 새 버전은 EasyMsg가 시작 시 자동으로 확인합니다.",
             "windows": {
               "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
               "sha256": "$SHA"
@@ -52,5 +52,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add EasyMsg-Windows-x64.zip latest.json
-          git commit -m "release: EasyMsg 0.3.0" || exit 0
+          git commit -m "release: EasyMsg 0.3.1" || exit 0
           git push
