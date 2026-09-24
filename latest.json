@@ -3,6 +3,6 @@
   "notes": "자동 업데이트 채널 연결 수정. 이후 새 버전은 EasyMsg가 시작 시 자동으로 확인합니다.",
   "windows": {
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "162d3100a9f8a75489c1c041cc34b53c24a0339901fc33b4ae8966dfeb7b985c"
+    "sha256": "1a71fd098e304361a9a6ce86164d555c806806dfd9d61fabf37de313084023f5"
   }
 }
