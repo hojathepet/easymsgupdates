@@ -16,9 +16,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download v0.3.1 Windows artifact
+      - name: Download final v0.3.1 Windows artifact
         run: |
-          curl -L --fail --retry 3 'https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-cbec-822f-a159-a5eccbc47650/raw?se=2026-09-24T05%3A24%3A22Z&sp=r&sv=2026-02-06&sr=b&scid=837ac895-13d3-546c-90d7-bfb842209225&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T01%3A35%3A10Z&ske=2026-09-25T01%3A35%3A10Z&sks=b&skv=2026-02-06&sig=NqO/ECFN%2B%2BzyA6CNieJgJewlCCii3%2Bn8Pq4vgaYP/48%3D' -o ci-artifact.zip
+          curl -L --fail --retry 3 'https://sdmntprnorthcentralus.oaiusercontent.com/files/00000000-d61c-822f-bcae-ee078035f176/raw?se=2026-09-24T05%3A25%3A17Z&sp=r&sv=2026-02-06&sr=b&scid=c5c0d336-aca7-5de3-b321-e0699b5e4e8e&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T04%3A05%3A20Z&ske=2026-09-25T04%3A05%3A20Z&sks=b&skv=2026-02-06&sig=byoJ5fivff79cflIXuBTK7/HhRa36CIXxsB7PaTGGy8%3D' -o ci-artifact.zip
 
       - name: Extract distributable package
         run: |
