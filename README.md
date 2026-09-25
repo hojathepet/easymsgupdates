@@ -8,9 +8,8 @@ Public binary-only update channel for EasyMsg. The private source repository rem
 
 ## Publish a Windows update
 
-1. Merge the source change and download `EasyMsg-Windows-Installer` and `EasyMsg-Windows-x64` from a successful Windows CI run. Extract each artifact.
-2. In a branch of this repository, replace `EasyMsgSetup.exe` and `EasyMsg-Windows-x64.zip` with the extracted files.
-3. Update `latest.json` in the same branch. Set `version` to the version in the source `pubspec.yaml`, write release notes, and calculate each file's SHA-256 with `Get-FileHash` (PowerShell) or `sha256sum`.
-4. Open a pull request. The validation workflow checks both files, hashes, and URLs. Merge the pull request only after it passes; the binaries and manifest then become live together.
+The private source repository's **Publish Windows update** workflow builds and publishes these three files in one commit. It runs for a version tag such as `v0.3.5`, or can be started manually on the source repository's `main` branch. The source repository needs a one-time `EASYMSG_UPDATES_TOKEN` Actions secret with **Contents: Read and write** permission limited to this update repository. No file transfer is required for later releases.
+
+The validation workflow in this repository checks the binaries, hashes, and URLs after publication and on pull requests.
 
 Do not store tokens, private keys, source code, or temporary artifact URLs in this repository.
