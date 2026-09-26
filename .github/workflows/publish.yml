@@ -1,68 +1,66 @@
-name: Publish EasyMsg update
+name: Validate EasyMsg update
 
 on:
   push:
     branches: [main]
     paths:
       - ".github/workflows/publish.yml"
+      - "latest.json"
+      - "EasyMsgSetup.exe"
+      - "EasyMsg-Windows-x64.zip"
+  pull_request:
+    paths:
+      - ".github/workflows/publish.yml"
+      - "latest.json"
+      - "EasyMsgSetup.exe"
+      - "EasyMsg-Windows-x64.zip"
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
-  publish:
+  validate:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download EasyMsg 0.3.3 artifacts
-        run: |
-          curl -L --fail --retry 3 'https://sdmntpreastus2.oaiusercontent.com/files/00000000-e3bc-81f6-9768-daadea77c946/raw?se=2026-09-24T07%3A16%3A39Z&sp=r&sv=2026-02-06&sr=b&scid=19f5cebe-24fd-5256-92d5-9d1dde69d692&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T06%3A02%3A33Z&ske=2026-09-25T06%3A02%3A33Z&sks=b&skv=2026-02-06&sig=ve2Tdo7N5lPIGk%2Bbvl4ZLA9eQXR%2Blk/21YeDrFPMlUU%3D' -o installer-artifact.zip
-          curl -L --fail --retry 3 'https://sdmntprkoreacentral.oaiusercontent.com/files/00000000-f1e4-8206-80b8-a5bfd0ff6c28/raw?se=2026-09-24T07%3A16%3A45Z&sp=r&sv=2026-02-06&sr=b&scid=35e935c7-d600-5433-be71-57c84d4c25cc&skoid=0765b554-4b90-4fa2-9d6d-0055a2427910&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-24T06%3A42%3A24Z&ske=2026-09-25T06%3A42%3A24Z&sks=b&skv=2026-02-06&sig=f/Y3%2B1n8%2B4/uNN9pV3DhaFNkH2vtchNtrxUNi8pVvoQ%3D' -o package-artifact.zip
-
-      - name: Extract distributables
+      - name: Verify published files and manifest
         run: |
           python3 - <<'PY'
+          from hashlib import sha256
           from pathlib import Path
+          import json
+          import re
           import zipfile
 
-          with zipfile.ZipFile("installer-artifact.zip") as z:
-              z.extractall("installer-artifact")
-          installers = list(Path("installer-artifact").rglob("*.exe"))
-          if len(installers) != 1:
-              raise SystemExit(f"Expected one installer EXE, found {len(installers)}")
-          Path("EasyMsgSetup.exe").write_bytes(installers[0].read_bytes())
+          manifest = json.loads(Path('latest.json').read_text(encoding='utf-8'))
+          version = manifest['version']
+          if not re.fullmatch(r'\d+\.\d+\.\d+', version):
+              raise SystemExit(f'Invalid version: {version!r}')
 
-          with zipfile.ZipFile("package-artifact.zip") as z:
-              z.extractall("package-artifact")
-          src = Path("package-artifact/EasyMsg-Windows-x64.zip")
-          if not src.exists():
-              raise SystemExit("EasyMsg-Windows-x64.zip not found")
-          Path("EasyMsg-Windows-x64.zip").write_bytes(src.read_bytes())
+          windows = manifest['windows']
+          base = 'https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/'
+          files = (
+              ('EasyMsgSetup.exe', 'installerUrl', 'installerSha256'),
+              ('EasyMsg-Windows-x64.zip', 'url', 'sha256'),
+          )
+          for name, url_key, hash_key in files:
+              path = Path(name)
+              if not path.is_file() or path.stat().st_size == 0:
+                  raise SystemExit(f'Missing or empty release file: {name}')
+              if windows[url_key] != base + name:
+                  raise SystemExit(f'Incorrect {url_key} in latest.json')
+              actual = sha256(path.read_bytes()).hexdigest()
+              if actual.lower() != str(windows[hash_key]).lower():
+                  raise SystemExit(f'SHA-256 mismatch: {name}')
+              print(f'{name}: SHA-256 OK')
+
+          if Path('EasyMsgSetup.exe').read_bytes()[:2] != b'MZ':
+              raise SystemExit('Installer is not a Windows executable')
+          with zipfile.ZipFile('EasyMsg-Windows-x64.zip') as archive:
+              if archive.testzip() is not None:
+                  raise SystemExit('Windows ZIP contains a corrupt file')
+              if not any(name.lower().endswith('easymsg.exe') for name in archive.namelist()):
+                  raise SystemExit('Windows ZIP does not contain easymsg.exe')
+          print(f'EasyMsg {version} update manifest is valid')
           PY
-
-      - name: Create update manifest
-        run: |
-          INSTALLER_SHA=$(sha256sum EasyMsgSetup.exe | awk '{print $1}')
-          ZIP_SHA=$(sha256sum EasyMsg-Windows-x64.zip | awk '{print $1}')
-          cat > latest.json <<EOF
-          {
-            "version": "0.3.3",
-            "notes": "자동업데이트 안정성 수정: ZIP 직접 덮어쓰기를 폐기하고 SHA-256 검증된 EasyMsg 설치 프로그램이 현재 설치 위치를 안전하게 갱신한 뒤 앱을 다시 실행합니다.",
-            "windows": {
-              "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-              "installerSha256": "$INSTALLER_SHA",
-              "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-              "sha256": "$ZIP_SHA"
-            }
-          }
-          EOF
-
-      - name: Publish update files
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add EasyMsgSetup.exe EasyMsg-Windows-x64.zip latest.json
-          git commit -m "release: EasyMsg 0.3.3" || exit 0
-          git push
