@@ -1,10 +1,10 @@
 {
-  "version": "0.3.3",
-  "notes": "자동업데이트 안정성 수정: ZIP 직접 덮어쓰기를 폐기하고 SHA-256 검증된 EasyMsg 설치 프로그램이 현재 설치 위치를 안전하게 갱신한 뒤 앱을 다시 실행합니다.",
+  "version": "0.3.5",
+  "notes": "EasyMsg 0.3.5 Windows update",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "7b185ece31d3b5d534ac440b86629d39b66c06bff64274a4804610eab8c5a23a",
+    "installerSha256": "fe67c1dad99b5787215fa73407c5c5fe0917d95f0c4f7733937a3ffd81ed20ba",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "5b1d950391e41e1dfbb073cef13c3639a32fd2de10d08f89bcc5ab3f016caf5a"
+    "sha256": "6fd28301f59a7eed8b12be350dfd1f6e008b58ca2e8c637dc43c074194f1b753"
   }
 }
