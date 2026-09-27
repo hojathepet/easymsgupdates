@@ -1,10 +1,10 @@
 {
-  "version": "0.3.16",
-  "notes": "EasyMsg 0.3.16 Windows update",
+  "version": "0.3.17",
+  "notes": "Windows 자동 업데이트 첫 클릭 설치·재실행 확인",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "aa8b3a8c080fc1c6fb62ba5b2985562d9f38d4dab69bf20dd6f8e602870cfe85",
+    "installerSha256": "bcc2fc00eaa3b1f460f5ef1495cfaffe3cb32fabaeaa6ca1e4b452648c997400",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "af6a5422e2c257dab2fa5474a245bc955d8590928fb8b7eb8c1213fe0a80b410"
+    "sha256": "612a49b5705487032f7bc57b7ff18130d99f17bc6c377f128021301ac904d29f"
   }
 }
