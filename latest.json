@@ -1,10 +1,10 @@
 {
-  "version": "0.3.21",
-  "notes": "게임 채팅·메모 탭과 창 분리, 여러 메모를 /로 구분해 한 파일로 저장, 메시지 미리보기 알림.",
+  "version": "0.3.22",
+  "notes": "게임 창 탭 이동·순서 변경·분리·재결합, 합쳐질 위치 미리보기와 넓어진 위아래 감지 범위.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "5106f571cf9a16d593e33ebea4744a7e91fd6aef0f0ec70fd18208dd74e0fdc0",
+    "installerSha256": "50da8fbf5b6dfcb275048e10dd4c00bca7e9e118971ea04dbbb895877769ae24",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "ca6877a37c13f71327e6146f55032654b2802467bcc24d78a2c7362d099b2ada"
+    "sha256": "6be65a1c26d6dd4205d4df8e63f0718317bff42e4209860c14034aa383a6f15c"
   }
 }
