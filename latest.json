@@ -1,10 +1,10 @@
 {
-  "version": "0.3.23",
-  "notes": "IPv6 로컬 자동 검색·인증 연결 추가, 저장된 LAN 허용 설정 재확인으로 반복 승인 안내 수정. IPv6 연결은 두 Windows PC 모두 0.3.23 이상이어야 합니다.",
+  "version": "0.3.24",
+  "notes": "게임 채팅·메모 화면을 미리 준비해 첫 실행 지연을 줄이고 최근 기록 처리량을 줄였습니다. 기본 입력키는 Enter이며 직접 저장한 입력키는 유지됩니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "d328704b4e6e6cb26c7034df623dae868aef2f7a80ded2fa721331df0bfb33b4",
+    "installerSha256": "bd6d29113687cf9d1ae11720953c65b35add53a195f5ecbea74b06e005cecee0",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "ea7c8143a36227c9626bf957ac72098ef004d2e8fc72410c393f590fbaac7a7e"
+    "sha256": "3456526bee6037cb72588eeae753d6fc5158a8a6507dc6da12b288200cf2058b"
   }
 }
