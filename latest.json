@@ -1,10 +1,10 @@
 {
-  "version": "0.3.22",
-  "notes": "게임 창 탭 이동·순서 변경·분리·재결합, 합쳐질 위치 미리보기와 넓어진 위아래 감지 범위.",
+  "version": "0.3.23",
+  "notes": "IPv6 로컬 자동 검색·인증 연결 추가, 저장된 LAN 허용 설정 재확인으로 반복 승인 안내 수정. IPv6 연결은 두 Windows PC 모두 0.3.23 이상이어야 합니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "50da8fbf5b6dfcb275048e10dd4c00bca7e9e118971ea04dbbb895877769ae24",
+    "installerSha256": "d328704b4e6e6cb26c7034df623dae868aef2f7a80ded2fa721331df0bfb33b4",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "6be65a1c26d6dd4205d4df8e63f0718317bff42e4209860c14034aa383a6f15c"
+    "sha256": "ea7c8143a36227c9626bf957ac72098ef004d2e8fc72410c393f590fbaac7a7e"
   }
 }
