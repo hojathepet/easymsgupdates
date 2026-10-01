@@ -1,10 +1,10 @@
 {
-  "version": "0.3.24",
-  "notes": "게임 채팅·메모 화면을 미리 준비해 첫 실행 지연을 줄이고 최근 기록 처리량을 줄였습니다. 기본 입력키는 Enter이며 직접 저장한 입력키는 유지됩니다.",
+  "version": "0.3.25",
+  "notes": "게임 채팅·메모의 최초 분리용 예비 창을 미리 준비하고, 탭 내용을 그린 뒤 표시하도록 개선했습니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "bd6d29113687cf9d1ae11720953c65b35add53a195f5ecbea74b06e005cecee0",
+    "installerSha256": "75a704e791a01cdbc8679e067223394e1f3c83a9274a431f3b12239f890296f9",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "3456526bee6037cb72588eeae753d6fc5158a8a6507dc6da12b288200cf2058b"
+    "sha256": "34b9c3161e8a47a76d1e21dd2e684058b085e706c71a4a4c450157ae6489d6ba"
   }
 }
