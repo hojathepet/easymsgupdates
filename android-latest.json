@@ -1,0 +1,10 @@
+{
+  "version": "0.4.1",
+  "notes": "핫스팟 연결·QR 등록 안정화 및 Android 앱 내 업데이트 지원",
+  "android": {
+    "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
+    "sha256": "493617e1445364fc40a1a88c090ffee1811b58305c272093981f798750466f90",
+    "buildNumber": 30,
+    "packageName": "com.easymsg.easymsg"
+  }
+}
