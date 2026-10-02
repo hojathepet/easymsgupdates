@@ -1,10 +1,10 @@
 {
-  "version": "0.3.25",
-  "notes": "게임 채팅·메모의 최초 분리용 예비 창을 미리 준비하고, 탭 내용을 그린 뒤 표시하도록 개선했습니다.",
+  "version": "0.4.0",
+  "notes": "상대 기기가 꺼져 있거나 연결되지 않으면 메시지와 파일을 전송 대기로 보관하고, 재연결 후 자동 전송합니다. 양쪽 모두 0.4.0이면 실제 수신 확인 후 전달 완료를 표시하고 재전송 중복을 방지합니다. 대기는 앱 종료·재부팅 후에도 복원되며 보내는 EasyMsg가 실행 중일 때 자동 전송합니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "75a704e791a01cdbc8679e067223394e1f3c83a9274a431f3b12239f890296f9",
+    "installerSha256": "05ff2059a63885aee8835b0b6a08dc733c265290f7916018ac8d2536c8497b9d",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "34b9c3161e8a47a76d1e21dd2e684058b085e706c71a4a4c450157ae6489d6ba"
+    "sha256": "51e5e9bb8772a0c867118bea691ad662478a8e11237b9e3fa82f9538b9b99ae6"
   }
 }
