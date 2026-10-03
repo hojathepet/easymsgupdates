@@ -1,10 +1,10 @@
 {
-  "version": "0.4.0",
-  "notes": "상대 기기가 꺼져 있거나 연결되지 않으면 메시지와 파일을 전송 대기로 보관하고, 재연결 후 자동 전송합니다. 양쪽 모두 0.4.0이면 실제 수신 확인 후 전달 완료를 표시하고 재전송 중복을 방지합니다. 대기는 앱 종료·재부팅 후에도 복원되며 보내는 EasyMsg가 실행 중일 때 자동 전송합니다.",
+  "version": "0.4.1",
+  "notes": "PC 핫스팟의 기기 검색 응답과 QR 등록 확인을 안정화했습니다. 중복 검색·등록 요청과 겹치는 재연결을 줄이고, 네트워크 초기화 중에도 앱 화면이 표시되도록 개선했습니다. 모바일 0.4.0과의 메시지 연결은 호환됩니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "05ff2059a63885aee8835b0b6a08dc733c265290f7916018ac8d2536c8497b9d",
+    "installerSha256": "567c985111388a0f5073a4279bdd462d19a800d15360cb5f92d25b5e5516dec7",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "51e5e9bb8772a0c867118bea691ad662478a8e11237b9e3fa82f9538b9b99ae6"
+    "sha256": "1ca288d61301f0372f148f952d5fb829668c3f1383d810e0f3f810de72c2229a"
   }
 }
