@@ -1,10 +1,10 @@
 {
-  "version": "0.4.2",
-  "notes": "메시지 알림음을 겹쳐 재생하고, 앱이 열려 있어도 해당 대화창을 보고 있지 않으면 소리가 납니다. 저장된 주소를 함께 확인하고 새 검색 주소를 바로 시도하며, 응답 없는 이전 인증 연결을 짧게 확인해 휴대폰 재연결 지연을 줄였습니다.",
+  "version": "0.4.3",
+  "notes": "대화상대를 클릭하면 바로 입력할 수 있고, Ctrl+V 이미지 붙여넣기와 전송 전 미리보기를 지원합니다. 검색 소켓 오류·네트워크 변경 뒤 자동 복구하고 IPv4·IPv6 경로를 함께 보관해 지속 검색과 재연결을 개선했습니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "56178424f39d03bc893c1a549bcb22a14eb5de08410d7d3fa84210c1df8761ba",
+    "installerSha256": "633dfc937ea7c1e32b5ff19c15b39733c8ce09908828cb4fcfb9b06a59a9d1c8",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "1253a4b3e03af73ee569b8628bdccd83d968d54da2c9a9f9823b787908d29460"
+    "sha256": "017610d1cbba8ecaddcbdb8d44c607d7d5854cff6cbf242635fd6bc893de2d72"
   }
 }

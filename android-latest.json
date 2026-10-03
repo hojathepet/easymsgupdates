@@ -1,10 +1,10 @@
 {
-  "version": "0.4.2",
-  "notes": "휴대폰 연결 지연과 반복 LAN 안내 알림을 개선했습니다. 전체 화면 QR 스캔, 인증 후 양쪽 등록, 핫스팟 안정화와 앱 내부 업데이트를 포함합니다. Android 0.4.0 시험 앱은 서명이 달라 한 번 재설치·기기 재등록이 필요하며 삭제 시 앱 내부 데이터가 사라집니다.",
+  "version": "0.4.3",
+  "notes": "대화창의 이전 버튼을 누르면 홈으로 돌아갑니다. Android 13 이상은 키보드가 열린 상태의 시스템 이전 동작도 처리합니다. 검색 오류·네트워크 변경 뒤 복구하고 최근 IPv4·IPv6 경로를 함께 보관합니다. 0.4.1 이후의 고정 서명을 유지합니다.",
   "android": {
     "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
-    "sha256": "9deac609469a90e1489c55769865e18e6e284b5c6c8e31a1e616b3a9016a6e24",
-    "buildNumber": 31,
+    "sha256": "e951f40f2fc88d449eb5db43f61ed4fc9bff63b099baa231c40c9c5bff40bc88",
+    "buildNumber": 32,
     "packageName": "com.easymsg.easymsg"
   }
 }
