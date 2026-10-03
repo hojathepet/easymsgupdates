@@ -1,10 +1,10 @@
 {
-  "version": "0.4.1",
-  "notes": "PC 핫스팟의 기기 검색 응답과 QR 등록 확인을 안정화했습니다. 중복 검색·등록 요청과 겹치는 재연결을 줄이고, 네트워크 초기화 중에도 앱 화면이 표시되도록 개선했습니다. 모바일 0.4.0과의 메시지 연결은 호환됩니다.",
+  "version": "0.4.2",
+  "notes": "메시지 알림음을 겹쳐 재생하고, 앱이 열려 있어도 해당 대화창을 보고 있지 않으면 소리가 납니다. 저장된 주소를 함께 확인하고 새 검색 주소를 바로 시도하며, 응답 없는 이전 인증 연결을 짧게 확인해 휴대폰 재연결 지연을 줄였습니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "567c985111388a0f5073a4279bdd462d19a800d15360cb5f92d25b5e5516dec7",
+    "installerSha256": "56178424f39d03bc893c1a549bcb22a14eb5de08410d7d3fa84210c1df8761ba",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "1ca288d61301f0372f148f952d5fb829668c3f1383d810e0f3f810de72c2229a"
+    "sha256": "1253a4b3e03af73ee569b8628bdccd83d968d54da2c9a9f9823b787908d29460"
   }
 }

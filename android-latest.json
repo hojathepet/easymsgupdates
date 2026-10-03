@@ -1,0 +1,10 @@
+{
+  "version": "0.4.2",
+  "notes": "휴대폰 연결 지연과 반복 LAN 안내 알림을 개선했습니다. 전체 화면 QR 스캔, 인증 후 양쪽 등록, 핫스팟 안정화와 앱 내부 업데이트를 포함합니다. Android 0.4.0 시험 앱은 서명이 달라 한 번 재설치·기기 재등록이 필요하며 삭제 시 앱 내부 데이터가 사라집니다.",
+  "android": {
+    "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
+    "sha256": "9deac609469a90e1489c55769865e18e6e284b5c6c8e31a1e616b3a9016a6e24",
+    "buildNumber": 31,
+    "packageName": "com.easymsg.easymsg"
+  }
+}

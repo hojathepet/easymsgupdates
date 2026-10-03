@@ -8,12 +8,16 @@ on:
       - "latest.json"
       - "EasyMsgSetup.exe"
       - "EasyMsg-Windows-x64.zip"
+      - "android-latest.json"
+      - "EasyMsg-Android.apk"
   pull_request:
     paths:
       - ".github/workflows/publish.yml"
       - "latest.json"
       - "EasyMsgSetup.exe"
       - "EasyMsg-Windows-x64.zip"
+      - "android-latest.json"
+      - "EasyMsg-Android.apk"
   workflow_dispatch:
 
 permissions:
@@ -63,4 +67,24 @@ jobs:
               if not any(name.lower().endswith('easymsg.exe') for name in archive.namelist()):
                   raise SystemExit('Windows ZIP does not contain easymsg.exe')
           print(f'EasyMsg {version} update manifest is valid')
+
+          android_path = Path('android-latest.json')
+          if android_path.exists():
+              mobile = json.loads(android_path.read_text(encoding='utf-8'))
+              if not re.fullmatch(r'\d+\.\d+\.\d+', mobile['version']):
+                  raise SystemExit('Invalid Android version')
+              android = mobile['android']
+              if android['packageName'] != 'com.easymsg.easymsg' or type(android['buildNumber']) is not int or android['buildNumber'] <= 0:
+                  raise SystemExit('Invalid Android package/build')
+              if android['apkUrl'] != base + 'EasyMsg-Android.apk':
+                  raise SystemExit('Incorrect Android update URL')
+              apk = Path('EasyMsg-Android.apk')
+              if not 0 < apk.stat().st_size < 95_000_000:
+                  raise SystemExit('Missing/oversized Android APK')
+              if sha256(apk.read_bytes()).hexdigest() != android['sha256']:
+                  raise SystemExit('Android APK SHA-256 mismatch')
+              with zipfile.ZipFile(apk) as archive:
+                  if archive.testzip() is not None or 'AndroidManifest.xml' not in archive.namelist() or 'lib/arm64-v8a/libapp.so' not in archive.namelist():
+                      raise SystemExit('Invalid optimized Android APK')
+              print(f"EasyMsg Android {mobile['version']}+{android['buildNumber']} APK/hash OK")
           PY
