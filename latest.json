@@ -1,10 +1,10 @@
 {
-  "version": "0.4.4",
-  "notes": "등록된 PC의 USB·네트워크 프린터를 검색하고 PDF·JPG·PNG를 인쇄할 수 있습니다. 프린터 PC의 설정 → 프린터에서 등록 기기의 인쇄 허용을 한 번 켜 주세요. 용지·방향·매수를 선택할 수 있으며, 인쇄 대기열 접수를 확인하고 중복 자동 인쇄를 방지합니다.",
+  "version": "0.4.5",
+  "notes": "프린터 목록 자동 갱신 중에도 선택한 프린터로 인쇄할 수 있습니다. 인쇄를 시작한 뒤 도착한 검색 결과가 선택을 바꾸지 않도록 했으며, 기존 목록이 있으면 검색 진행 표시로 화면이 움직이지 않습니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "ebada094a94a01d7e4ce8c9fe19314ceb62b750a8f5541d4d7ef59b864a28db9",
+    "installerSha256": "e1b757e8225adfdf5ba1c40506d6aa9ab6b445162eb52e10dbd262648fa1788e",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "0ca2fc1a5de2286f8e1db394d72533c7cd9b74b9dea8ffdfcb20a927797ce9e9"
+    "sha256": "d345a8cd55f925fbcfe38dea7ab165389d49a93260a9d9feca6418ffc6475b8d"
   }
 }
