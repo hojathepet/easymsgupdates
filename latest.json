@@ -1,10 +1,10 @@
 {
-  "version": "0.4.3",
-  "notes": "대화상대를 클릭하면 바로 입력할 수 있고, Ctrl+V 이미지 붙여넣기와 전송 전 미리보기를 지원합니다. 검색 소켓 오류·네트워크 변경 뒤 자동 복구하고 IPv4·IPv6 경로를 함께 보관해 지속 검색과 재연결을 개선했습니다.",
+  "version": "0.4.4",
+  "notes": "등록된 PC의 USB·네트워크 프린터를 검색하고 PDF·JPG·PNG를 인쇄할 수 있습니다. 프린터 PC의 설정 → 프린터에서 등록 기기의 인쇄 허용을 한 번 켜 주세요. 용지·방향·매수를 선택할 수 있으며, 인쇄 대기열 접수를 확인하고 중복 자동 인쇄를 방지합니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "633dfc937ea7c1e32b5ff19c15b39733c8ce09908828cb4fcfb9b06a59a9d1c8",
+    "installerSha256": "ebada094a94a01d7e4ce8c9fe19314ceb62b750a8f5541d4d7ef59b864a28db9",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "017610d1cbba8ecaddcbdb8d44c607d7d5854cff6cbf242635fd6bc893de2d72"
+    "sha256": "0ca2fc1a5de2286f8e1db394d72533c7cd9b74b9dea8ffdfcb20a927797ce9e9"
   }
 }
