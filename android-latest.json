@@ -1,10 +1,10 @@
 {
-  "version": "0.4.5",
-  "notes": "프린터 목록 자동 갱신 중에도 선택한 프린터로 인쇄할 수 있습니다. 인쇄를 시작한 뒤 도착한 검색 결과가 선택을 바꾸지 않도록 했으며, 기존 목록이 있으면 검색 진행 표시로 화면이 움직이지 않습니다.",
+  "version": "0.4.6",
+  "notes": "기기 등록 QR을 간소화하고 상세 인쇄 옵션을 추가했습니다. 용지·쪽 범위·컬러·양면·급지함·품질·배율·여백을 선택하며 프린터 PC에서 Windows 기본 인쇄 창을 열 수도 있습니다. 상세 옵션은 프린터 PC도 0.4.6 이상이어야 합니다.",
   "android": {
     "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
-    "sha256": "9efb39b9d76b749ba3cc11af77b6fc5f8e99e60a90cb48c57d7bc50868c48f45",
-    "buildNumber": 34,
+    "sha256": "676904d6fbfa9f6398b788597c4481225dc8d44911fc16d4a85bcd18c8402cad",
+    "buildNumber": 35,
     "packageName": "com.easymsg.easymsg"
   }
 }
