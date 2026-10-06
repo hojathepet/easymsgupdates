@@ -1,10 +1,10 @@
 {
-  "version": "0.4.6",
-  "notes": "기기 등록 QR을 간소화하고 상세 인쇄 옵션을 추가했습니다. 용지·쪽 범위·컬러·양면·급지함·품질·배율·여백을 선택하며 프린터 PC에서 Windows 기본 인쇄 창을 열 수도 있습니다. 상세 옵션은 프린터 PC도 0.4.6 이상이어야 합니다.",
+  "version": "0.4.7",
+  "notes": "EasyMsg가 기본적으로 세로로 긴 작은 창으로 열리도록 조정했습니다. Windows 화면 배율을 반영하며 창 크기는 직접 조절할 수 있습니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "ef6fb78f9da45678acd8999e9c860937c0020f3989fab4c2a47d77405b402ce6",
+    "installerSha256": "9df21cf3f8c6bce647d3d6cfef47db3bc75934cac9b74fafb2ac261d47b4089f",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "ffffff52e9fb91aca689bb754ba7ae4e7eb848f010c98ea300aefa6dac096955"
+    "sha256": "42e926557fcb9e4e9be2aeda9bae73457f1583de91b36975f18d589ac6436416"
   }
 }
