@@ -1,10 +1,10 @@
 {
-  "version": "0.4.10",
-  "notes": "WebP 이미지를 인쇄 화면과 대화에서 바로 인쇄합니다. 움직이는 WebP는 첫 화면을 인쇄합니다. 대화의 HTTP·HTTPS·www 주소를 누르면 기본 브라우저에서 열립니다. 기존 대화에도 적용됩니다.",
+  "version": "0.4.11",
+  "notes": "파일 전송 시 중복 텍스트 변환을 줄이고 더 큰 조각으로 전송합니다. 암호화·취소·수신 확인을 유지하며 이전 버전과도 연결됩니다. 최적 속도를 위해 상대 기기도 업데이트하세요.",
   "android": {
     "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
-    "sha256": "ed6a193d080cbcc43070a4295e7bbb02c0602507733fcfe9eb8390196e241057",
-    "buildNumber": 39,
+    "sha256": "1313a0328dcf246cd79e7cdd0e527a9ed1cc82c6f8f5211074d9f002592eb1e7",
+    "buildNumber": 40,
     "packageName": "com.easymsg.easymsg"
   }
 }
