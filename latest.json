@@ -1,10 +1,10 @@
 {
-  "version": "0.4.9",
-  "notes": "게임 채팅에서 이미 열린 탭을 추가 목록에서 제외합니다. 프린터가 감지된 PC를 자동 선택하며, Windows 인쇄 목록에 프린터를 추가하면 PDF·브라우저 등 다른 앱의 인쇄 창에서 사용할 수 있습니다. 두 PC의 EasyMsg가 켜져 있어야 합니다.",
+  "version": "0.4.10",
+  "notes": "WebP 이미지를 인쇄 화면과 대화에서 바로 인쇄합니다. 움직이는 WebP는 첫 화면을 인쇄합니다. 일반 대화와 게임 채팅의 HTTP·HTTPS·www 주소를 클릭하면 기본 브라우저에서 열립니다. 기존 대화에도 적용됩니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "949d4d58c132e6cab506dabd1e8dcc45d8cdb06331ab8bf53bfe026f1ee12b05",
+    "installerSha256": "1f4df99972b05cbd4decbbc101dc1e237ddefce02548feda96edf0669d015c40",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "642c681013a3f8e3d33823d3433936c98492f5b6a5085d70d5b4df1f5f247a73"
+    "sha256": "2cec378306c8ca3d1d7109b9fd5bc281ad7a08fe896f0ca30d3b3f2ef624672c"
   }
 }

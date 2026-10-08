@@ -1,10 +1,10 @@
 {
-  "version": "0.4.9",
-  "notes": "인쇄 버튼이 Android 하단 조작 영역에 가려지지 않도록 수정했습니다. 사용할 수 있는 프린터가 감지된 PC를 자동으로 선택하며, 직접 선택한 PC와 프린터는 유지합니다.",
+  "version": "0.4.10",
+  "notes": "WebP 이미지를 인쇄 화면과 대화에서 바로 인쇄합니다. 움직이는 WebP는 첫 화면을 인쇄합니다. 대화의 HTTP·HTTPS·www 주소를 누르면 기본 브라우저에서 열립니다. 기존 대화에도 적용됩니다.",
   "android": {
     "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
-    "sha256": "b773dac26dc7fa58ae2e29f93531e9fe12ebd9fd2728ee00bfcf18e80c92a49a",
-    "buildNumber": 38,
+    "sha256": "ed6a193d080cbcc43070a4295e7bbb02c0602507733fcfe9eb8390196e241057",
+    "buildNumber": 39,
     "packageName": "com.easymsg.easymsg"
   }
 }
