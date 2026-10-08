@@ -1,10 +1,10 @@
 {
-  "version": "0.4.7",
-  "notes": "EasyMsg가 기본적으로 세로로 긴 작은 창으로 열리도록 조정했습니다. Windows 화면 배율을 반영하며 창 크기는 직접 조절할 수 있습니다.",
+  "version": "0.4.9",
+  "notes": "게임 채팅에서 이미 열린 탭을 추가 목록에서 제외합니다. 프린터가 감지된 PC를 자동 선택하며, Windows 인쇄 목록에 프린터를 추가하면 PDF·브라우저 등 다른 앱의 인쇄 창에서 사용할 수 있습니다. 두 PC의 EasyMsg가 켜져 있어야 합니다.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "9df21cf3f8c6bce647d3d6cfef47db3bc75934cac9b74fafb2ac261d47b4089f",
+    "installerSha256": "949d4d58c132e6cab506dabd1e8dcc45d8cdb06331ab8bf53bfe026f1ee12b05",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "42e926557fcb9e4e9be2aeda9bae73457f1583de91b36975f18d589ac6436416"
+    "sha256": "642c681013a3f8e3d33823d3433936c98492f5b6a5085d70d5b4df1f5f247a73"
   }
 }
