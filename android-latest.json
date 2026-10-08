@@ -1,10 +1,10 @@
 {
-  "version": "0.4.8",
-  "notes": "Wi-Fi 변경 후 앱을 다시 열 때 발생하던 no_activity 오류를 수정했습니다. 화면이 종료된 백그라운드 상태에서도 LAN 검색과 연결을 복구하고 자동 재연결의 임시 오류가 채팅 위에 반복 표시되지 않도록 했습니다.",
+  "version": "0.4.9",
+  "notes": "인쇄 버튼이 Android 하단 조작 영역에 가려지지 않도록 수정했습니다. 사용할 수 있는 프린터가 감지된 PC를 자동으로 선택하며, 직접 선택한 PC와 프린터는 유지합니다.",
   "android": {
     "apkUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Android.apk",
-    "sha256": "ac52a6c77a745962680b6ef3a35a586cd9dd9db8d8587a8b447ea632ee2afdf3",
-    "buildNumber": 37,
+    "sha256": "b773dac26dc7fa58ae2e29f93531e9fe12ebd9fd2728ee00bfcf18e80c92a49a",
+    "buildNumber": 38,
     "packageName": "com.easymsg.easymsg"
   }
 }
