@@ -1,10 +1,10 @@
 {
-  "version": "0.4.10",
-  "notes": "WebP 이미지를 인쇄 화면과 대화에서 바로 인쇄합니다. 움직이는 WebP는 첫 화면을 인쇄합니다. 일반 대화와 게임 채팅의 HTTP·HTTPS·www 주소를 클릭하면 기본 브라우저에서 열립니다. 기존 대화에도 적용됩니다.",
+  "version": "0.4.11",
+  "notes": "파일 전송 속도를 개선했습니다. Windows 기본 암호화로 처리 시간을 줄이고 양쪽 기기가 새 버전이면 중복 텍스트 변환 없이 더 큰 조각으로 전송합니다. 암호화·취소·수신 확인을 유지하며 이전 버전과도 연결됩니다. 최적 속도를 위해 양쪽 기기를 업데이트하세요.",
   "windows": {
     "installerUrl": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsgSetup.exe",
-    "installerSha256": "1f4df99972b05cbd4decbbc101dc1e237ddefce02548feda96edf0669d015c40",
+    "installerSha256": "0a8b2f2ba3d6ef3749b619685c45eb1a0614e9b98b8ee52bb35d0f1989ac4a5c",
     "url": "https://raw.githubusercontent.com/hojathepet/easymsgupdates/main/EasyMsg-Windows-x64.zip",
-    "sha256": "2cec378306c8ca3d1d7109b9fd5bc281ad7a08fe896f0ca30d3b3f2ef624672c"
+    "sha256": "6dc633ce66ab5b62b3bcdab0a593c8ab750a02f28f6eeab99b8c3024b56cae0c"
   }
 }
